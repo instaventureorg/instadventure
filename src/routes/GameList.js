@@ -37,17 +37,6 @@ export default class GameListPage extends React.Component {
             </div>
           ))}
         </div>
-        <button
-          onClick={() =>
-            updateCharacter({
-              gameId: "firstGame",
-              strength: 999,
-              characterId: "firstcharacter"
-            })
-          }
-        >
-          Update Character
-        </button>
       </div>
     );
   }
