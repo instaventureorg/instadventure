@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, BrowserRouter as Router, NavLink } from 'react-router-dom';
+import {Button} from 'react-bootstrap'
 import './App.css';
 import { LandingPage, GamePage, GameListPage, UserPage } from './routes/routes.js'
 
@@ -10,12 +11,11 @@ export default class App extends React.Component {
         <div className="App">
           {/* Temporary Nav Links During Testing Stage*/}
           <div className="Links">
-            <ul>
-              <li><NavLink to="/">Landing</NavLink></li>
-              <li><NavLink to="/user">User</NavLink></li>
-              <li><NavLink to="/game_list">Game List</NavLink></li>
-              <li><NavLink to="/game">Game</NavLink></li>
-            </ul>
+              <span><NavLink to="/"><Button>Landing</Button></NavLink></span>
+              <span><NavLink to="/user"><Button>User</Button></NavLink></span>
+              <span><NavLink to="/game_list"><Button>Game List</Button></NavLink></span>
+              <span><NavLink to="/game"><Button>Game</Button></NavLink></span>
+            
           </div>
 
           <div className="Pages">
