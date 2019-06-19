@@ -24,7 +24,7 @@ export default class App extends React.Component{
             <Route path="/" exact component={LandingPage} />
             <Route path="/user" exact component={UserPage} />
             <Route path="/game_list" exact component={GameListPage} />
-            <Route path="/game" exact component={GamePage} />
+            <Route path="/game/:id" exact component={GamePage} />
           </div>
         </div>
       </Router>
