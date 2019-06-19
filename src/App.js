@@ -1,12 +1,14 @@
 import React from 'react';
 import { Route, BrowserRouter as Router, NavLink } from 'react-router-dom';
-import './App.css';
 import { LandingPage, GamePage, GameListPage, UserPage } from './routes/routes.js'
+import './App.css';
+import fireApp from './fire.js'
+import firebase from 'firebase'
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <Router>
+export default class App extends React.Component{
+  render (){
+  return (
+    <Router>
         <div className="App">
           {/* Temporary Nav Links During Testing Stage*/}
           <div className="Links">
@@ -26,6 +28,7 @@ export default class App extends React.Component {
           </div>
         </div>
       </Router>
-    );
-  }
+  );}
 }
+
+
