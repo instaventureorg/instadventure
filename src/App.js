@@ -5,6 +5,7 @@ import fireApp from './fire.js'
 import firebase from 'firebase'
 
 function App() {
+  console.log(fireApp.firestore().collection('messages'))
   return (
     <div className="App">
       <header className="App-header">
@@ -20,7 +21,7 @@ function App() {
         >
           Learn React
         </a>
-        <p>{fireApp.firestore().collections('messages').doc('7bvDKHteXRxQNeyWdGA9')}</p>
+        <p>{}</p>
       </header>
     </div>
   );
