@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from '../logo.svg';
+import UserLogin from '../components/UserLogin'
 
 export default class Landing extends React.Component {
   render() {
@@ -9,6 +10,7 @@ export default class Landing extends React.Component {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <UserLogin />
         <a
           className="App-link"
           href="https://reactjs.org"
