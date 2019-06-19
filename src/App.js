@@ -17,7 +17,7 @@ export default class App extends React.Component{
               <span><NavLink to="/user"><Button>User</Button></NavLink></span>
               <span><NavLink to="/game_list"><Button>Game List</Button></NavLink></span>
               <span><NavLink to="/game"><Button>Game</Button></NavLink></span>
-            
+
           </div>
 
           <div className="Pages">
