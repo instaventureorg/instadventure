@@ -29,6 +29,7 @@ export default class App extends React.Component{
 
           <div className="Footer">
             <p><b><span className='instadventure-name'>InstAdventure</span></b> was created for <a href='https://www.developerweek.com/NYC/'>DeveloperWeek NYC</a>'s 2019 Hackathon by Jason Bennett, Claire Gilligan, Alex Kramer, and Malhar Teli, with Blake Dignes.</p>
+            <Route path="/game/:id" exact component={GamePage} />
           </div>
         </div>
       </Router>
