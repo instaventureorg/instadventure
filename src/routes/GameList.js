@@ -1,5 +1,8 @@
-import React from 'react'
-import fireApp from '../fire'
+import React from "react";
+import fireApp from "../fire";
+import { siteMessage } from "../utilityfuncs/siteMessage";
+import { gameMessage } from "../utilityfuncs/gameMessage";
+import { updateCharacter } from "../utilityfuncs/updateCharacter";
 import GameRow from '../components/GameRow'
 
 export default class GameListPage extends React.Component {
@@ -8,7 +11,7 @@ export default class GameListPage extends React.Component {
     this.ref = fireApp.firestore().collection('games')
     this.state = {
       gameList: []
-    }
+    };
   }
   onCollectionUpdate = snapshot => {
     let gameList = [];
@@ -16,13 +19,13 @@ export default class GameListPage extends React.Component {
       let data = doc.data();
       data.id = doc.id;
       gameList.push(data);
-    })
+    });
     this.setState({
       gameList: gameList
-    })
-  }
+    });
+  };
   async componentDidMount() {
-    this.unsubscribe = this.ref.onSnapshot(this.onCollectionUpdate)
+    this.unsubscribe = this.ref.onSnapshot(this.onCollectionUpdate);
   }
 
   joinOnClick = (gameId) => {
