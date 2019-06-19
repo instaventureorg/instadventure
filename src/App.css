@@ -31,3 +31,18 @@
     transform: rotate(360deg);
   }
 }
+
+#nav-links {
+  display: flex;
+  justify-content: space-around;
+  padding: 1vh 10vh 5vh;
+}
+
+.Footer {
+  color: azure;
+  font-size: 85%;
+}
+
+.instadventure-name{
+  text-shadow: 0.08em 0.08em orangered;
+}

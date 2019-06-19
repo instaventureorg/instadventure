@@ -27,7 +27,7 @@ code {
   align-items: center;
   align-content: space-around;
   flex-direction: column;
-  padding: 9vh;
+  padding: 4vh 9vh;
   color: azure;
 }
 
