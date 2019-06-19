@@ -1,71 +1,23 @@
 # instaventure
-An instant adventure platform for hosting dungeon mastered games
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Do you remember the text adventure games of the early decades of computing? Do you
+like tabletop roleplaying games like Dungeons and Dragons, and wish they were
+easier to play online (or wish you had people to play with)?
 
-## Available Scripts
+InstAdventure may be just the solution you've been waiting for!
 
-In the project directory, you can run:
+With InstAdventure, you can sign up as a Game Master, and run your own text-based
+adventures, with strangers or with friends. Or you can sign up to join someone else's
+game, working with others in the chat to cooperatively play a single player.
 
-### `npm start`
+Are you questing to find the seven lost jewels hidden across the kingdom before
+the ancient dragon awakes and devours everything? Are you forced to team up with
+your crush's jerk boyfriend in order to save your high school from the supervillain
+who's hijacked your prom? Are you solving the murders no one else seems to care
+about, or protecting the city from its corrupt public officials? Your imagination
+is the only limit!
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Created for DeveloperWeek NYC 2019's Hackathon by Jason Bennett, Claire Gilligan,
+Alex Kramer, and Malhar Teli, with help from Blake Dignes.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+<!-- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). -->
