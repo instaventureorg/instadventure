@@ -31,7 +31,8 @@ export default class GamePage extends React.Component {
         gameMaster={this.state.gameMaster}
       />
       <Post 
-        userId={this.state.userId} 
+        userId={this.props.userId} 
+        displayName = {this.props.displayName}
         gameId={this.state.gameId}
         />
       

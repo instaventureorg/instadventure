@@ -21,7 +21,7 @@ export default class App extends React.Component {
   }
   componentDidMount() {
     let that = this;
-    firebase.auth().onAuthStateChanged(function(user) {
+    firebase.auth().onAuthStateChanged(function (user) {
       if (user) {
         console.log(user);
         that.setState({ userId: user.uid, displayName: user.displayName });
@@ -61,11 +61,20 @@ export default class App extends React.Component {
                 />
               )}
             />
-            <Route path="/game_list" exact component={GameListPage} />
-            <Route path="/game/:id" exact component={GamePage} />
-            {/* <Route path="/login" exact component={Login} /> */}
-            {/* <Route path="/Signup" exact component={Signup} /> */}
-            <Route path="/game/:gameMaster/:id" exact component={GamePage} />
+            <Route path="/game_list" exact render={props => (
+              <GameListPage
+                {...props}
+                userId={this.state.userId}
+                displayName={this.state.displayName}
+              />
+            )} />
+            <Route path="/game/:gameMaster/:id" exact render={props => (
+                <GamePage
+                  {...props}
+                  userId={this.state.userId}
+                  displayName={this.state.displayName}
+                />
+              )} />
           </div>
 
           <div className="Footer">

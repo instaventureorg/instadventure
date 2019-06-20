@@ -43,6 +43,7 @@ export default class GameListPage extends React.Component {
   }
 
   render() {
+    console.log('game list', this.props)
     return (
       <div>
 
@@ -53,13 +54,19 @@ export default class GameListPage extends React.Component {
             <GameRow
               title={game.title}
               gamemaster={game.gamemaster}
+              gameMasterDisplay={game.gameMasterDisplay}
               gameId={game.id}
               join={this.joinOnClick}
               view={this.viewOnClick}
             />
           ))}
         </div>
-        <CreateGame />
+        <CreateGame userId={this.props.userId} displayName={this.props.displayName}/>
+
+        <p>this is </p>
+        <p>this is </p>
+        <p>this is </p>
+        <p>nothing </p>
       </div>
     )
   }
