@@ -23,9 +23,9 @@ export default class App extends React.Component {
     firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
         console.log(user);
-        that.setState({ userId: user.uid });
+        that.setState({ userId: user.uid, displayName: user.displayName });
       } else {
-        that.setState({ userId: null });
+        that.setState({ userId: null, displayName: null });
       }
     });
   }
