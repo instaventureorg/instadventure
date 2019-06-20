@@ -5,9 +5,57 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #0F0D3A;
+  color: azure;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+
+}
+
+#landing-box {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: space-around;
+  flex-direction: column;
+  overflow: auto;
+}
+
+#welcome-paragraph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: space-around;
+  flex-direction: column;
+  padding: 9vh 4vh;
+  color: azure;
+}
+
+.instadventure-name{
+  text-shadow: 0.08em 0.08em orangered;
+}
+
+#landing a {
+  color:lightskyblue;
+}
+
+#login-buttons {
+  display:flex;
+  justify-content: space-evenly;
+  margin-bottom: 6em;
+}
+
+@media (min-width: 451px) {
+  #landing-box {
+    margin: 0vh 8vh;
+  }
+}
+@media (max-width: 450px) {
+  #login-buttons {
+    flex-direction: column;
+    align-content: space-between;
+  }
 }
