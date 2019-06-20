@@ -1,10 +1,6 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Form, Button } from 'react-bootstrap'
 import { createGame } from '../utilityfuncs/createGame'
-
-//TODO replace with actual user
-const userId = 'Alex'
 
 export default class CreateGame extends React.Component {
   constructor(props) {
@@ -25,16 +21,21 @@ export default class CreateGame extends React.Component {
     var game = {
       title: this.state.gameName,
       description: this.state.description,
-      gamemaster: userId,
+      gamemaster: this.props.userId,
+      gameMasterDisplay: this.props.displayName
 
     }
+    console.log('game is',game)
     event.preventDefault()
+
     createGame(game)
     this.setState({ description: '', gameName: '' })
     //TODO replace with redirect?
   }
   render() {
+    console.log('create game', this.props)
     return (
+      
       <div>
         <Form onSubmit={(event) => this.onFormSubmit(event)}>
           <Form.Group controlId="name.text">

@@ -22,7 +22,8 @@ export default class Post extends React.Component {
       text: this.state.text,
       time: new Date(),
       userId: this.props.userId,
-      gameId: this.props.gameId
+      gameId: this.props.gameId,
+      userName: this.props.displayName
     }
     event.preventDefault()
     gameMessage(message)
@@ -55,5 +56,6 @@ export default class Post extends React.Component {
 
 Post.propTypes = {
   userId: PropTypes.string,
-  gameId: PropTypes.string
+  gameId: PropTypes.string,
+  displayName: PropTypes.string
 }
