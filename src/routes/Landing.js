@@ -12,7 +12,7 @@ export default class Landing extends React.Component {
           <p>With <b><span className='instadventure-name'>InstAdventure</span></b>, you can sign up as a Game Master, and run your own text-based adventures, with strangers or with friends. Or you can sign up to join someone else's game, working with others in the chat to cooperatively play a single player.</p>
           <p>Are you questing to find the seven lost jewels hidden across the kingdom before the ancient dragon awakes and devours everyone? Are you forced to team up with your crush's jerk boyfriend in order to save the day from the supervillain who's hijacked your senior prom? Are you solving the murders no one else seems to care about&mdash;or protecting the city from its corrupt public officials? Your imagination is the only limit!</p>
         </div>
-        <div id='login-component'>
+        <div id='login-buttons'>
           <NavLink to="/login"><Button>Log into <b>InstAdventure</b></Button></NavLink>
           <NavLink to="/signup"><Button>Sign up for <b>InstAdventure</b></Button></NavLink>
         </div>

@@ -21,6 +21,7 @@ code {
   justify-content: center;
   align-content: space-around;
   flex-direction: column;
+  overflow: auto;
 }
 
 #welcome-paragraph {
@@ -31,7 +32,6 @@ code {
   flex-direction: column;
   padding: 9vh 4vh;
   color: azure;
-  max-width: 1152px;
 }
 
 .instadventure-name{
@@ -42,7 +42,20 @@ code {
   color:lightskyblue;
 }
 
-#login-component {
+#login-buttons {
   display:flex;
   justify-content: space-evenly;
+  margin-bottom: 6em;
+}
+
+@media (min-width: 451px) {
+  #landing-box {
+    margin: 0vh 8vh;
+  }
+}
+@media (max-width: 450px) {
+  #login-buttons {
+    flex-direction: column;
+    align-content: space-between;
+  }
 }
