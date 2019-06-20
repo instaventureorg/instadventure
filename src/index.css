@@ -38,24 +38,70 @@ code {
   text-shadow: 0.08em 0.08em orangered;
 }
 
-#landing a {
-  color:lightskyblue;
+.firebaseui-idp-list {
+  display:flex;
+  justify-content: space-between;
+  margin-bottom: 6em;
 }
 
-#login-buttons {
-  display:flex;
-  justify-content: space-evenly;
+.firebaseui-list-item {
+  margin: 5vh;
+}
+
+.firebaseui_container {
   margin-bottom: 6em;
 }
 
 @media (min-width: 451px) {
   #landing-box {
     margin: 0vh 8vh;
-  }
+  };
 }
 @media (max-width: 450px) {
-  #login-buttons {
+  .firebaseui-idp-list {
     flex-direction: column;
     align-content: space-between;
   }
 }
+
+/* GameList */
+
+#game-list {
+  margin: 10vh 4vh;
+}
+
+/* #games {
+
+}
+
+.GameRow {
+
+} */
+
+#game-list > h1 {
+  text-align: center;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+}
+
+#game-list > h2 {
+  color: orangered !important;
+}
+
+#game-list>h3 {
+  color: #96FFFF !important;
+  font-size: 80% !important;
+}
+
+.games-button {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* #game-list > button {
+
+}
+
+.LogMessage {
+
+} */

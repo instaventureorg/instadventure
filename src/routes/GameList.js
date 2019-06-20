@@ -43,8 +43,8 @@ export default class GameListPage extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>Game List Page </h1>
+      <div id='game-list'>
+        <h1>List of Active Games</h1>
         <div id='games'>
           {this.state.gameList.map((game) => (
             <GameRow

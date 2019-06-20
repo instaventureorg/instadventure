@@ -12,10 +12,9 @@ export default class App extends React.Component{
     <Router>
         <div className="App">
           <nav id='nav-links' className="Links">
-            <NavLink to="/"><Button>Home</Button></NavLink>
-            <NavLink to="/user"><Button>User</Button></NavLink>
-            <NavLink to="/game_list"><Button>Game List</Button></NavLink>
-            {/* <NavLink to="/game"><Button>Game</Button></NavLink> */}
+            <NavLink to="/" className="navbar-link"><Button>Home</Button></NavLink>
+            <NavLink to="/user" className="navbar-link"><Button>User</Button></NavLink>
+            <NavLink to="/game_list" className="navbar-link"><Button>Game List</Button></NavLink>
           </nav>
 
           <div className="Pages">
@@ -23,8 +22,6 @@ export default class App extends React.Component{
             <Route path="/user" exact component={UserPage} />
             <Route path="/game_list" exact component={GameListPage} />
             <Route path="/game/:id" exact component={GamePage} />
-            {/* <Route path="/login" exact component={Login} /> */}
-            {/* <Route path="/Signup" exact component={Signup} /> */}
             <Route path="/game/:gameMaster/:id" exact component={GamePage} />
           </div>
 

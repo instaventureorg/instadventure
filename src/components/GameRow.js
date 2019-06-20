@@ -8,9 +8,9 @@ export default class GameRow extends React.Component{
     return(
       <div className='GameRow'>
         <h2>{this.props.title}</h2>
-        <h3>{this.props.gamemaster}</h3>
-        {(this.props.join)?<Button onClick={()=>this.props.join(this.props.gameId,this.props.gamemaster)}>Join</Button>:<span/>}
-        {(this.props.view)?<Button onClick={()=>this.props.view(this.props.gameId,this.props.gamemaster)}>View</Button>:<span/>}
+        <h3>by {this.props.gamemaster}</h3>
+        <span className='games-button'>{(this.props.join)?<Button onClick={()=>this.props.join(this.props.gameId,this.props.gamemaster)}>Join</Button>:<span/>}
+        {(this.props.view)?<Button onClick={()=>this.props.view(this.props.gameId,this.props.gamemaster)}>View</Button>:<span/>}</span>
       </div>
     )
   }
