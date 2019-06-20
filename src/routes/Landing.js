@@ -1,8 +1,31 @@
 import React from 'react'
 import logo from '../logo.svg';
-import UserLogin from '../components/UserLogin'
+import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'
+import fireApp from "../fire";
+import firebase from "firebase";
 
 export default class Landing extends React.Component {
+  constructor(){
+    super()
+    this.state ={
+      isLoggedIn: false
+    }
+  }
+  uiConfig = {
+    signInFlow: "popup",
+    signInOptions: [
+      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+      firebase.auth.EmailAuthProvider.PROVIDER_ID
+    ]
+  };
+  componentWillMount(){
+    this.unregisterAuthObserver = fireApp.auth().onAuthStateChanged(user => {
+      this.setState({ isSignedIn: !!user });
+    });
+  }
+  componentWillUnmount() {
+    this.unregisterAuthObserver();
+  }
   render() {
     return (
       <header className="App-header">
@@ -10,7 +33,12 @@ export default class Landing extends React.Component {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <UserLogin />
+        {this.state.isSignedIn!== undefined && !this.state.isSignedIn &&(
+          <StyledFirebaseAuth
+          uiConfig={this.uiConfig}
+          firebaseAuth={fireApp.auth()}
+        />
+        )}
         <a
           className="App-link"
           href="https://reactjs.org"
