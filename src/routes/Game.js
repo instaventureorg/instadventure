@@ -16,26 +16,20 @@ export default class GamePage extends React.Component {
       gameId: null
     }
   }
+
   componentWillMount(){
     const { id } = this.props.match.params
     console.log(this.props.match.params)
     //TODO replace with look up the game and use the object for all the test data
     this.setState({gameId:id})
   }
+
+  //Temporary
   appendMessages = (messages) =>{
     return messages.map(m=> {
       m.isGameMaster = m.user === gameMaster
       return m
     })
-  }
-
-  //We probably don't need these for MVP
-  editOnClick = () =>{
-    console.log('clicked edit')
-  }
-
-  deleteOnClick = () => {
-    console.log('delete message')
   }
 
   render() {
@@ -47,11 +41,11 @@ export default class GamePage extends React.Component {
 
 
       <GameLog 
-        messageList={this.appendMessages(testData)}
-        // TODO - STRETCH do a check to see if the user is the master, or not and keep this feature turned off
-        isUserMaster={false} 
-        editOnClick={this.editOnClick}
-        deleteOnClick={this.deleteOnClick}
+        messageList={this.appendMessages(testData)
+          // TODO don't do this as a prop, send the game id down.
+        
+        }
+        
       />
     </div>
     )

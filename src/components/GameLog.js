@@ -11,15 +11,13 @@ export default class GameLog extends React.Component {
   render(){
     return(
       <div>
+        <h1>- Game Log -</h1>
         {this.props.messageList.map((message)=>(
           <LogMessage
             text={message.text}
             messageId={message.id}
             isGameMaster= {message.isGameMaster}
             user={message.user}
-            isUserMaster={this.props.isUserMaster}
-            deleteOnClick={this.props.deleteOnClick}
-            editOnClick={this.props.editOnClick}
 
           />
         ))}
@@ -29,9 +27,5 @@ export default class GameLog extends React.Component {
 }
 
 GameLog.propTypes = {
-  messageList: PropTypes.object.isRequired,
-  isUserMaster: PropTypes.bool,
-  editOnClick: PropTypes.func,
-  deleteOnClick: PropTypes.func
-
+  messageList: PropTypes.object.isRequired
 }
