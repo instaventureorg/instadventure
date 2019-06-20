@@ -14,7 +14,7 @@
     "react-scripts": "3.0.1"
   },
   "scripts": {
-    "start": "firebase serve",
+    "start": "react-scripts build & firebase serve",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
