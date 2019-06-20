@@ -6,11 +6,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #0F0D3A;
+  color: azure;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+
 }
 
 #landing-box {
@@ -27,8 +29,9 @@ code {
   align-items: center;
   align-content: space-around;
   flex-direction: column;
-  padding: 4vh 9vh;
+  padding: 9vh 4vh;
   color: azure;
+  max-width: 1152px;
 }
 
 .instadventure-name{

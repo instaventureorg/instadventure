@@ -1,11 +1,18 @@
-.App {
+nav {
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: #0F0D3A;
+  border-bottom: 1px ridge darkslategray;
   text-align: center;
+  max-height: 55px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+#login-component {
+  display: flex;
+  justify-content: space-around;
+  padding: 2px;
 }
 
 .App-header {
@@ -19,10 +26,6 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -32,15 +35,17 @@
   }
 }
 
-#nav-links {
-  display: flex;
-  justify-content: space-around;
-  padding: 1vh 10vh 5vh;
-}
-
 .Footer {
   color: azure;
+  background: #0F0D3A;
   font-size: 85%;
+  padding: 1vh 2.5vh 0vh;
+  width: 100%;
+  z-index: 2;
+  position: fixed;
+  bottom: 0;
+  max-height: 50px;
+  border-top: 1px ridge darkslategray;
 }
 
 .instadventure-name{
