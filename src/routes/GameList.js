@@ -28,16 +28,17 @@ export default class GameListPage extends React.Component {
     this.unsubscribe = this.ref.onSnapshot(this.onCollectionUpdate);
   }
 
-  joinOnClick = (gameId) => {
+  //Loading both gameId and gameMaster was a quick work around for Game not yet pulling that in.
+  joinOnClick = (gameId,gameMaster) => {
     //Join should add the user to the game and redirect to the page
     //TODO -> add user to the game
 
-    this.viewOnClick(gameId)
+    this.viewOnClick(gameId,gameMaster)
   }
 
-  viewOnClick = (gameId)=>{
+  viewOnClick = (gameId,gameMaster)=>{
     //view will just redirect to the page
-    this.props.history.push(`/game/${gameId}`)
+    this.props.history.push(`/game/${gameMaster}/${gameId}`)
   }
 
   render() {
