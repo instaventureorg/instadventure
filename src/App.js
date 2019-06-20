@@ -15,7 +15,8 @@ export default class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      userId: null
+      userId: null,
+      displayName: null
     };
   }
   componentDidMount() {
@@ -30,6 +31,7 @@ export default class App extends React.Component {
     });
   }
   render() {
+    console.log(this.state);
     return (
       <Router>
         <div className="App">
@@ -48,7 +50,17 @@ export default class App extends React.Component {
 
           <div className="Pages">
             <Route path="/" exact component={LandingPage} />
-            <Route path="/user" exact component={UserPage} />
+            <Route
+              path="/user"
+              exact
+              render={props => (
+                <UserPage
+                  {...props}
+                  userId={this.state.userId}
+                  displayName={this.state.displayName}
+                />
+              )}
+            />
             <Route path="/game_list" exact component={GameListPage} />
             <Route path="/game/:id" exact component={GamePage} />
             {/* <Route path="/login" exact component={Login} /> */}
