@@ -1,5 +1,6 @@
 import React from 'react'
 import GameLog from '../components/GameLog'
+import Post from '../components/Post'
 
 export default class GamePage extends React.Component {
   constructor(props){
@@ -7,8 +8,10 @@ export default class GamePage extends React.Component {
     this.state = {
       gameMaster:null,
       gameId: null,
-      messageList: []
+      messageList: [],
+      userId: 'Alex'
     }
+    //Assume that the current user's id will be loaded as well
   }
 
   componentWillMount(){
@@ -27,10 +30,11 @@ export default class GamePage extends React.Component {
         gameId={this.state.gameId}
         gameMaster={this.state.gameMaster}
       />
-      <div>Need a Post Message Thing</div>
-      <div>Stats?</div>
-      <div>Inventory - give us stuff</div>
-      <div>Users in the game? Or is that actually stretch?</div>
+      <Post 
+        userId={this.state.userId} 
+        gameId={this.state.gameId}
+        />
+      
       
     </div>
     )
