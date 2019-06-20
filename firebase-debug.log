@@ -1,0 +1,38 @@
+[debug] [2019-06-20T01:35:50.046Z] ----------------------------------------------------------------------
+[debug] [2019-06-20T01:35:50.048Z] Command:       /home/j/.nvm/versions/node/v12.1.0/bin/node /home/j/.nvm/versions/node/v12.1.0/bin/firebase serve
+[debug] [2019-06-20T01:35:50.049Z] CLI Version:   7.0.0
+[debug] [2019-06-20T01:35:50.049Z] Platform:      linux
+[debug] [2019-06-20T01:35:50.049Z] Node Version:  v12.1.0
+[debug] [2019-06-20T01:35:50.049Z] Time:          Wed Jun 19 2019 21:35:50 GMT-0400 (Eastern Daylight Time)
+[debug] [2019-06-20T01:35:50.049Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-20T01:35:50.058Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-20T01:35:50.058Z] > authorizing via signed-in user
+[debug] [2019-06-20T01:35:50.059Z] [iam] checking project instadventure-3c9a4 for permissions ["firebase.projects.get"]
+[debug] [2019-06-20T01:35:50.062Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-06-20T01:35:50.062Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-06-20T01:35:50.229Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-20T01:35:50.264Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/instadventure-3c9a4:testIamPermissions  
+
+[debug] [2019-06-20T01:35:50.563Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-20T01:35:50.567Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/instadventure-3c9a4  
+ 
+[debug] [2019-06-20T01:35:50.667Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/j/github/instaventure'...
+[info] 
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "12"
+[debug] [2019-06-20T01:35:50.682Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/1004682902882/clients/_:getWebAppConfig  
+ 
+[debug] [2019-06-20T01:35:50.683Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/1004682902882:getServerAppConfig  
+ 
+[debug] [2019-06-20T01:35:50.862Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: Emulator started at http://localhost:5001
+[debug] [2019-06-20T01:35:50.928Z] <<< HTTP RESPONSE 200
+[info] i  functions: Watching "/home/j/github/instaventure/functions" for Cloud Functions...
+[info] i  hosting: Serving hosting files from: build
+[info] ✔  hosting: Local server: http://localhost:5000
+[debug] [2019-06-20T01:35:51.188Z] Functions runtime initialized.
+[debug] [2019-06-20T01:35:51.189Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-20T01:35:51.249Z] firebase-admin has been stubbed.
