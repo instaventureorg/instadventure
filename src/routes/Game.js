@@ -1,52 +1,37 @@
 import React from 'react'
 import GameLog from '../components/GameLog'
 
-const testData = [
- { id:'hello', text:'hi there', user:'Alex'},
- { id:'yo', text:'heyyy', user:'Jeana'},
- { id:'23', text:'hi good bye', user:'Alex'}
-]
-
-const gameMaster = 'Alex'
-
 export default class GamePage extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      gameId: null
+      gameMaster:null,
+      gameId: null,
+      messageList: []
     }
   }
 
   componentWillMount(){
-    const { id } = this.props.match.params
-    console.log(this.props.match.params)
-    //TODO replace with look up the game and use the object for all the test data
-    this.setState({gameId:id})
+    const { id, gameMaster } = this.props.match.params
+    this.setState({gameId:id, gameMaster:gameMaster})
   }
 
-  //Temporary
-  appendMessages = (messages) =>{
-    return messages.map(m=> {
-      m.isGameMaster = m.user === gameMaster
-      return m
-    })
-  }
-
+  //Should render the game log, the move/log input, Stats, inventory, and users
   render() {
-    console.log('messages', this.appendMessages(testData))
     return (
     <div>
       {/* TODO replace with game name and description */}
-      <p>{`Welcome to ${this.state.id}`} </p>
-
+      <p>{`Welcome to ${this.state.gameId} by ${this.state.gameMaster}`} </p>
 
       <GameLog 
-        messageList={this.appendMessages(testData)
-          // TODO don't do this as a prop, send the game id down.
-        
-        }
-        
+        gameId={this.state.gameId}
+        gameMaster={this.state.gameMaster}
       />
+      <div>Need a Post Message Thing</div>
+      <div>Stats?</div>
+      <div>Inventory - give us stuff</div>
+      <div>Users in the game? Or is that actually stretch?</div>
+      
     </div>
     )
   }
