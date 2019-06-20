@@ -4,6 +4,7 @@ import { siteMessage } from "../utilityfuncs/siteMessage";
 import { gameMessage } from "../utilityfuncs/gameMessage";
 import { updateCharacter } from "../utilityfuncs/updateCharacter";
 import GameRow from '../components/GameRow'
+import CreateGame from '../components/CreateGame'
 
 export default class GameListPage extends React.Component {
   constructor(props) {
@@ -29,19 +30,20 @@ export default class GameListPage extends React.Component {
   }
 
   //Loading both gameId and gameMaster was a quick work around for Game not yet pulling that in.
-  joinOnClick = (gameId,gameMaster) => {
+  joinOnClick = (gameId, gameMaster) => {
     //Join should add the user to the game and redirect to the page
     //TODO -> add user to the game
 
-    this.viewOnClick(gameId,gameMaster)
+    this.viewOnClick(gameId, gameMaster)
   }
 
-  viewOnClick = (gameId,gameMaster)=>{
+  viewOnClick = (gameId, gameMaster) => {
     //view will just redirect to the page
     this.props.history.push(`/game/${gameMaster}/${gameId}`)
   }
 
   render() {
+    console.log('game list', this.props)
     return (
       <div id='game-list'>
         <h1>List of Active Games</h1>
@@ -50,12 +52,19 @@ export default class GameListPage extends React.Component {
             <GameRow
               title={game.title}
               gamemaster={game.gamemaster}
+              gameMasterDisplay={game.gameMasterDisplay}
               gameId={game.id}
               join={this.joinOnClick}
               view={this.viewOnClick}
             />
           ))}
         </div>
+        <CreateGame userId={this.props.userId} displayName={this.props.displayName}/>
+
+        <p>this is </p>
+        <p>this is </p>
+        <p>this is </p>
+        <p>nothing </p>
       </div>
     )
   }
